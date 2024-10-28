@@ -6,11 +6,9 @@ src/components/cart
 src/components/chat
 src/components/cart
 src/components/favorite
-src/components/items
 src/components/order_tracking
 src/components/ordersuccessful
 src/components/register
-src/components/search
 src/components/signin
 src/components/Slide
 src/components/user

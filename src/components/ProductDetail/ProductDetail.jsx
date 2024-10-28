@@ -9,7 +9,6 @@ import axios from "axios";
 import { API_PUBLIC_URL } from "../../utils/config";
 import { Container, Skeleton } from "@mui/material";
 import MainLayout from "../MainLayout";
-import queryString from "query-string";
 import { useParams } from "react-router-dom";
 
 const ProductDetail = () => {
@@ -18,14 +17,7 @@ const ProductDetail = () => {
     const [productDetail, setProductDetail] = useState({})
         function fetchProductDetailById (productId) {
             try {
-                const response = axios.get(`API_URL/product?id=${productId}`, {
-                    headers: {
-                        'Content-Type': 'application/json'
-                    }
-                })
-                if(response.status === 200 && response.data.length > 0) {
-                    setProductDetail(response.data)
-                }
+                
             } catch (error) {
                 console.log(error);
                 // Xử lý lỗi 
@@ -50,7 +42,6 @@ const ProductDetail = () => {
         getProductDetail(idProduct);
     }, [idProduct]);
     // const data = productData;
-
     return (
         <MainLayout>
             
